@@ -22,7 +22,7 @@ Before you can start building Lucee from source, you will need a few things inst
 
 1. **Apache Maven** - the source code contains several build scripts that will automate the build process for you. you will need Maven installed in order to run these build scripts. <http://maven.apache.org/>
 
-1. **Apache Ant** - the source code contains several build scripts that will automate the build process for you. you will need Maven installed in order to run these build scripts. <http://ant.apache.org/bindownload.cgi>
+1. **Apache Ant** - the source code contains several build scripts that will automate the build process for you. you will need Ant installed in order to run these build scripts. <http://ant.apache.org/bindownload.cgi>
 
 ### 2. Get the source code
 
