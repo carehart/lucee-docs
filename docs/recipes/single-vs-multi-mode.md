@@ -33,9 +33,9 @@ A long time ago, in a galaxy far, far away...
 
 Servers were expensive, memory was also scarce, Docker didn't exist and it was quite common for shared hosting to run many clients on the same server, so Lucee solved this problem with Multi Mode.
 
-Really should have been a Star Trek reference, as Ralio, the project Lucee was forked from, was named after [Rhylo](https://memory-alpha.fandom.com/wiki/Rhylo)
+Really should have been a Star Trek reference, as Railo, the project Lucee was forked from, was named after [Rhylo](https://memory-alpha.fandom.com/wiki/Rhylo)
 
-The name Lucee was inspired by the Film [Lucy](https://en.wikipedia.org/wiki/Lucy_(2014_film)), a machine which took over the world.
+The name Lucee was inspired by the filmz [Lucy](https://en.wikipedia.org/wiki/Lucy_(2014_film)), which featured a machine that took over the world.
 
 ## What is Multi Mode?
 
@@ -45,22 +45,20 @@ This is beneficial when running multiple web applications on a single server tha
 
 For example, in multi-mode the Lucee Admins have colour themes, Red is the Server Admin, Blue is the Web Admin.
 
-If you only every do configuration under the Red Server Admin, you are already quite close to using Lucee in single mode.
+If you only ever do configuration under the Red Server Admin, you are already quite close to using Lucee in single mode.
 
 ## What is Single Mode?
 
-Single Mode consolidates all configurations into a single context.
-
-This is ideal for environments where multiple web contexts are unnecessary.
+Single Mode consolidates all configurations into a single context.This is ideal for environments where multiple web contexts are unnecessary.
 
 Instead of maintaining separate configurations for each context, Single Mode simplifies operations by unifying them into one.
 
 ## Key Differences
 
-- All hosts served by a Lucee instance share the same Application name space, so `myapp` on `host1` is the same as `myapp` on `host2`, consider using `cgi.http_host` etc as part of the application name, if required
-- Mappings are the same across all hosts, so any application specific mappings should be done in `Application.cfc`, where as previously you might have done them in the Web Context Admin
+- All hosts served by a Lucee instance share the same Application name space, so `myapp` on `host1` is the same as `myapp` on `host. Consider using `cgi.http_host` etc as part of the application name, if required
+- Mappings are the same across all hosts, so any application specific mappings should be done in `Application.cfc`, whereas previously you might have done them in the Web Context Admin
 - mod_cfml is still required in single mode when using multiple hosts with Apache
-- Lower memory usage, as there is only one Lucee instance in single mode, less memory is required
+- Lower memory usage: as there is only one Lucee instance in single mode, less memory is required
 - One single common log directory
 
 ### **Configuration**
@@ -84,7 +82,7 @@ As there is only one namespace in single mode, check that the naming of schedule
 
 ### **Future Compatibility**
 
-- **Multi Mode**: Supported in Lucee 6.x, it was removed in Lucee 7.
+- **Multi Mode**: Supported in Lucee 6.X, removed in Lucee 7.
 - **Single Mode**: The default in Lucee 6.x and the only option with Lucee 7.0, making it the more future-proof choice.
 
 ## Switching Between Modes
@@ -113,15 +111,6 @@ You can easily switch between Single Mode and Multi Mode through the Lucee Admin
 ```
 
 - Note: Switching via this method does not support merging configurations.
-
-## Why Choose Single Mode?
-
-For setups like ours, where multiple web contexts with individual configurations are not needed, Single Mode provides significant benefits:
-
-- **Simplified Configuration**: Easier to manage and eliminates redundant settings.
-- **Unified Logging**: Clearer and more efficient logging.
-- **Better Performance**: Faster startup times.
-- **Future-Proof**: Prepares for Lucee 7, which will no longer support Multi Mode.
 
 ## Conclusion
 
